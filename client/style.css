@@ -1,0 +1,200 @@
+:root {
+    --btn: #54E6AF;
+    --btnHover: #B3FFE2;
+    --pTxt: #C2CBE5;
+    --bg: rgb(18, 23, 37, 0.9);
+    --bg2: rgb(18, 23, 37);
+    --input: #2C344B;
+}
+
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+     background-image: url(assets/mobile/image-host.jpg);
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+     background-size: cover;
+     font-family: "Chivo", sans-serif;
+}
+
+/* Typography  */
+h1 {
+    color: var(--btn);
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    line-height: 1.5em;
+}
+#everywhere {
+    color: #fff;
+}
+p {
+    color: var(--pTxt);
+    line-height: 1.5625;
+}
+h1, p {
+    font-weight: lighter;
+    text-align: center;
+}
+/* Centering containers */
+.main-container{
+    background-attachment: fixed;
+    height: 100vh;
+}
+.logo-container, .main-container {
+    background-color: var(--bg); 
+    width: 100%;
+}
+.logo {
+    display: block;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+.txt-container {
+    margin: 0 auto;
+    width: 80%;
+    margin-bottom: 25px;
+    padding-top: 50px;
+}
+
+/* Images icons */
+.image-container {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 80%;
+    height: 17px;
+    margin-bottom: 50px;
+}
+
+.icons {
+    grid-column: span 1;
+}
+
+.spotify {
+    width: 56px;
+}
+.apple {
+    width: 45px;
+}
+.google {
+    width: 73px;
+    height: inherit;
+}
+.pocket {
+    width: 77px;
+}
+
+/* Input area  */
+input, .button, .error{
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    padding: 1.25em;
+    border-radius: 28px;
+    border: none;
+    font-weight:700;
+}
+
+.input {
+    background-color: var(--input);
+    color: var(--pTxt);
+}
+.button {
+    background-color: var(--btn);
+    margin-top: 20px;
+}
+.button:hover, .button:focus {
+    background-color: var(--btnHover);
+}
+
+.error {
+    color: rgb(184, 51, 51);
+    font-weight: 400;
+    padding: 10px 0 0 0;
+    margin: 0 auto 10px auto;
+    
+}
+
+.dots, .tablet, .desktop {
+    display: none;
+}
+
+@media (min-width: 600px) {
+    .tablet, .dots {
+        display: block;
+    }
+    body {
+        background-image: none;
+        background-color: var(--bg2);
+    }
+    .main-container {
+        background-color: var(--bg2);
+    }
+    h1, p {
+        text-align: left;
+    }
+    h1 {
+        font-size: 2.125rem;
+    }
+    p {
+        font-size: 1.125rem;
+    }
+
+
+.tablet {
+position: relative;
+left: 30%;
+ width: 70%;
+ height: 800px;
+}
+.logo-container {
+    width: fit-content;
+}
+.logo {
+    position: absolute;
+    width: 15%;
+    left: 25px;
+}
+.main-container {
+    max-width: 750px;
+    width: 75%;
+    position: absolute;
+    top: 250px;
+    left: 5px;
+    height: fit-content;
+}
+.txt-container {
+    padding: 0;
+}
+.dots {
+   position: static;
+ bottom: 0px;
+ 
+}
+
+}
+
+@media (min-width: 1100px) {
+    .tablet {
+        display: none;
+    }
+    .desktop {
+        margin: 100px 0 0 0;
+        display: block;
+        float: right;
+        width: 70%;
+height: 75vh;
+    }
+    .logo {
+        width: 10%;
+    }
+    .dots {
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+    }
+  
+}
